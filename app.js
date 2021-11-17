@@ -1,8 +1,17 @@
-const age = parseInt(prompt("How old are you?"));
+const title = document.querySelector("div.hello #title");
 
-if( typeof age == Number) {
-	console.log(age);
+function handleTitleClick(){
+	title.style.color = "blue";
 }
-else {
-	parseInt(prompt("How old are you?"));
+
+function handleMouseEnter() {
+	title.innerText = "Mouse is here!";
 }
+
+function handleMouseLeave() {
+	title.innerText = "Mouse is gone!";
+}
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
